@@ -20,6 +20,8 @@ def login():
     client.send(entry1.get().encode())
     message = client.recv(1024).decode()
     client.send(entry2.get().encode())
+    message = client.recv(1024).decode()
+    print(message)
 
 frame = tk.CTkFrame(master=root)
 frame.pack(pady=20,padx=60,fill="both",expand=True)
